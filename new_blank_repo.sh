@@ -14,7 +14,7 @@ then
     exit 1
 fi
 
-git symbolic-ref HEAD refs/heads/ || exit
-echo "$1" > README.md || exit
+git symbolic-ref HEAD refs/heads/$1
+echo "$1" > README.md
 git add README.md
 git commit -m 'Initial blank branch commit'
